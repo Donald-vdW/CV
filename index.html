@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional CV</title>
+    <style>
+        /* Your CSS goes here */
+    </style>
+</head>
+<body>
+    <div id="cv"></div>
+
+    <script>
+        const url = 'https://raw.githubusercontent.com/YourGithubUsername/YourRepository/main/cv.html';
+
+        fetch('https://cors-anywhere.herokuapp.com/' + url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('cv').innerHTML = data;
+            })
+            .catch(console.error);
+    </script>
+</body>
+</html>
